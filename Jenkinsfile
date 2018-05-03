@@ -31,7 +31,7 @@ pipeline {
     }
     stage('copy xmls') {
       steps {
-        sh '''scp -p root@$target_cluster:/tmp/multiple_pods/*.xml .'''
+        sh '''scp -p root@$target_cluster:/tmp/ingest_resiliency/*.xml .'''
       }
     }
     stage('check_cores') {
