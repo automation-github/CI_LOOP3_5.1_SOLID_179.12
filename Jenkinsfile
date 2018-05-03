@@ -8,7 +8,7 @@ pipeline {
         test_name = 'test_ingest_resilency_npvr.py'
       }
       steps {
-        build '	resiliency_with_machine_groups_npvr_5.1'
+        build 'resiliency_with_machine_groups_npvr_5.1'
       }
     }
     stage('resiliency_with_machine_groups_rb_5.1') {
