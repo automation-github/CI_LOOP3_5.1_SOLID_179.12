@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('	resiliency_with_machine_groups_npvr_5.1') {
+    stage('resiliency_with_machine_groups_npvr_5.1') {
       agent any
       environment {
         target_cluster = '10.65.179.12'
