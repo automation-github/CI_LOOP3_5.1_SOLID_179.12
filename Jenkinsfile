@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    target_cluster = '10.65.182.143'
+    target_cluster = '10.65.179.12'
   }
   stages {
     stage('installation') {
