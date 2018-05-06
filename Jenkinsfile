@@ -10,18 +10,10 @@ pipeline {
           }
     }
 
-    stage('resiliency_with_machine_groups_npvr_5.1') {
+    stage('resiliency') {
       agent any
       steps {
-        build (job: 'resiliency_with_machine_groups_npvr_5.1', propagate: false)
-      }
-    }
-
-    stage('resiliency_with_machine_groups_rb_5.1') {
-      agent any
-
-      steps {
-        build (job: 'resiliency_with_machine_groups_rb_5.1', propagate: false)
+        build (job: 'resiliency/master', propagate: false)
       }
     }
 
