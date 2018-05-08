@@ -65,10 +65,11 @@ def BuildJob(projectName) {
 }
 
 node {
-  agent {
-      label 'master'
-      customWorkspace '/var/lib/jenkins/workspace/CI_LOOP3_5.1_SOLID_179.12'
-  }
+  ws('/var/lib/jenkins/workspace/CI_LOOP3_5.1_SOLID_179.12')
+  // agent {
+  //     label 'master'
+  //     customWorkspace '/var/lib/jenkins/workspace/CI_LOOP3_5.1_SOLID_179.12'
+  // }
 
   stage('installation') {
     sh "python2.7 /var/tmp/Nightswatch/deploy/upgrade_machines_sa.py -p $target_cluster --ininame \'/var/lib/jenkins/nightswatch/5.1/config.ini\'"
